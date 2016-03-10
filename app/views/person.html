@@ -1,0 +1,23 @@
+<p>This is the person view.</p>
+
+<div ng-controller="PersonCtrl">
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Mail</th>
+      <th>Supprimer</th>
+    </tr>
+    <tr ng-repeat="person in persons">
+      <td>{{person.id}}</td>
+      <td>{{person.firstName}}</td>
+      <td>{{person.lastName}}</td>
+      <td>{{person.mail}}</td>
+      <td ng-click="delete(person.id)">X</td>
+    </tr>
+
+  </table>
+
+  <a class="btn-default" href="#/addPerson">Ajouter personne</a>
+</div>
